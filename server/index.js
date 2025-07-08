@@ -40,7 +40,7 @@
     store: sessionStore,
     cookie: {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production", // must be true in production
+      secure: true,// must be true in production
       sameSite: "None", // required for cross-origin cookies
     },
   })
