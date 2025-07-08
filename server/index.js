@@ -18,7 +18,7 @@
   app.use(express.json());
   app.use(
     cors({
-      origin: ["https://salescrm-employee.onrender.com", "https://salescrm-salesadmin.onrender.com", "http://localhost:3000/"],
+      origin: ["https://salescrm-employee.onrender.com", "https://salescrm-salesadmin.onrender.com", "http://localhost:3000"],
           credentials: true,
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
