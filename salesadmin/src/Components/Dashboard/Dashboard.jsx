@@ -14,7 +14,7 @@ const [stats, setStats] = useState({
 
   const fetchStats = async () => {
     try {
-      const { data } = await axios.get("http://localhost:4000/api/dashboard");
+      const { data } = await axios.get("https://salescrm-server.onrender.com/api/dashboard");
       setStats(data);
     } catch (err) {
       console.error("Failed to fetch dashboard stats", err);

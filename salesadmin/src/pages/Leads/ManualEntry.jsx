@@ -4,11 +4,14 @@ import axios from "axios";
 
 const ManualEntry = ({ onClose, onAdded }) => {
   const [leadData, setLeadData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    // add other fields as per your Lead model
-  });
+  name: "",
+  email: "",
+  phone: "",
+  location: "",
+  language: "",
+  source: "",
+  receivedDate: "", 
+});
 
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
@@ -20,7 +23,7 @@ const ManualEntry = ({ onClose, onAdded }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:4000/api/leads", leadData, {
+      const res = await axios.post("https://salescrm-server.onrender.com/api/leads", leadData, {
         withCredentials: true,
       });
       setSuccess("Lead added successfully");
@@ -71,22 +74,28 @@ const ManualEntry = ({ onClose, onAdded }) => {
     
 
           <p>Location</p>
-           <select
-            name="location"
-            value={leadData.location}
-            required
-          >
+        <select
+  name="location"
+  value={leadData.location}
+  onChange={handleChange}
+  required
+>
+
             <option value="">Select</option>
             <option value="Hyderabad">Hyderabad</option>
             <option value="pune">pune</option>
             <option value="Delhi">Delhi</option>
             </select>
           <label>Language</label>
-          <select
-            name="language"
-            value={leadData.language}
-            required
-          >
+     
+            <select
+  name="language"
+  value={leadData.language}
+  onChange={handleChange}
+
+  required
+>
+
             <option value="">Select</option>
             <option value="Hindi">Hindi</option>
             <option value="English">English</option>
@@ -102,13 +111,15 @@ const ManualEntry = ({ onClose, onAdded }) => {
             onChange={handleChange}
             required
           />
-             {/* <input
-            type="text"
-            name="date"
-            placeholder="date"
-            value={leadData.receivedDate}
-            onChange={handleChange}
-          /> */}
+         <input
+  type="date"
+  name="receivedDate"
+  placeholder="Received Date"
+  value={leadData.receivedDate}
+  onChange={handleChange}
+  required
+/>
+
          
          
 

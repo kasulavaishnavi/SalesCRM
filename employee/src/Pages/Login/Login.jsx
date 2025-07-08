@@ -10,7 +10,7 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await axios.post("http://localhost:4000/api/auth/login", { email, password }, { withCredentials: true });
+    const response = await axios.post("https://salescrm-server.onrender.com/api/auth/login", { email, password }, { withCredentials: true });
     const data = response.data;
 
 

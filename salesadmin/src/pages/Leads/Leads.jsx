@@ -10,7 +10,7 @@ const Leads = () => {
 
   const LeadsData = async () => {
     try {
-      const info = await axios.get(`http://localhost:4000/api/leads`, {
+      const info = await axios.get(`https://salescrm-server.onrender.com/api/leads`, {
         withCredentials: true,
       });
       setLeads(Array.isArray(info.data) ? info.data : []);

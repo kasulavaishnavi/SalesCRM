@@ -12,7 +12,7 @@ const Schedule = () => {
 
   useEffect(() => {
     const fetchScheduledLeads = async () => {
-      const res = await axios.get("http://localhost:4000/api/leads?scheduledCalls=true", {
+      const res = await axios.get("https://salescrm-server.onrender.com/api/leads?scheduledCalls=true", {
         withCredentials: true,
       });
       setScheduledLeads(res.data);

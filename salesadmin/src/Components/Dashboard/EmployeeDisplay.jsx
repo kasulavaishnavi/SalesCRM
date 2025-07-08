@@ -10,7 +10,7 @@ const EmployeeDisplay = () => {
   useEffect(() => {
     const EmployeeDashboardData = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/api/auth/all`, {
+        const response = await axios.get(`https://salescrm-server.onrender.com/api/auth/all`, {
           withCredentials: true,
         });
         setEmployeeData(Array.isArray(response.data) ? response.data : []);

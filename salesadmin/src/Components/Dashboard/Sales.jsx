@@ -22,7 +22,7 @@ const Sales = () => {
 
   const fetchSales = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/api/leads");
+      const res = await axios.get("https://salescrm-server.onrender.com/api/leads");
 
       const closedLeads = res.data.filter((lead) => lead.status === "Closed");
 

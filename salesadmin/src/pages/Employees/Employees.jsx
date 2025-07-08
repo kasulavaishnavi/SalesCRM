@@ -41,7 +41,7 @@ const [openDropdownId, setOpenDropdownId] = useState(null);
 }
   const fetchData = async () => {
     try {
-      const response = await axios.get(`http://localhost:4000/api/auth/all`, {
+      const response = await axios.get(`https://salescrm-server.onrender.com/api/auth/all`, {
         withCredentials: true,
       });
       const data = Array.isArray(response.data) ? response.data : [];
@@ -87,7 +87,7 @@ const [openDropdownId, setOpenDropdownId] = useState(null);
     console.log("Payload being sent:", payload);
     try {
       await axios.post(
-        "http://localhost:4000/api/auth/register-employee",
+        "https://salescrm-server.onrender.com/api/auth/register-employee",
         payload,
         {
           withCredentials: true,
@@ -103,7 +103,7 @@ const [openDropdownId, setOpenDropdownId] = useState(null);
   const handleEditEmployee = async (updatedEmp) => {
     try {
       await axios.put(
-        `http://localhost:4000/api/auth/update/${updatedEmp._id}`,
+        `https://salescrm-server.onrender.com/api/auth/update/${updatedEmp._id}`,
         updatedEmp,
         {
           withCredentials: true,
@@ -131,7 +131,7 @@ const [openDropdownId, setOpenDropdownId] = useState(null);
   );
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:4000/api/auth/delete/${id}`);
+    await axios.delete(`https://salescrm-server.onrender.com/api/auth/delete/${id}`);
     fetchData();
   };
 

@@ -8,7 +8,7 @@ const RecentActivityFeed = () => {
 
   const fetchActivities = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/api/recentlogs/admin");
+      const res = await axios.get("https://salescrm-server.onrender.com/api/recentlogs/admin");
       setActivities(res.data.activities || []);
     } catch (err) {
       console.error("Failed to fetch recent activities:", err);

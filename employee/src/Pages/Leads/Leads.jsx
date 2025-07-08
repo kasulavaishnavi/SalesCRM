@@ -19,7 +19,7 @@ const Leads = () => {
 
   useEffect(() => {
     const fetchLeads = async () => {
-      const res = await axios.get("http://localhost:4000/api/leads", {
+      const res = await axios.get("https://salescrm-server.onrender.com/api/leads", {
         withCredentials: true,
       });
       setLeads(res.data);

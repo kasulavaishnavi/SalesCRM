@@ -41,7 +41,7 @@ const UploadCsv = ({ onClose, onUploaded }) => {
 
     try {
       const res = await axios.post(
-        "http://localhost:4000/api/leads/upload-csv",
+        "https://salescrm-server.onrender.com/api/leads/upload-csv",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },

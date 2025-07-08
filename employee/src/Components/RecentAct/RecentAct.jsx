@@ -27,7 +27,7 @@ useEffect(() => {
     }
 
     try {
-      const response = await axios.get(`http://localhost:4000/api/recentlogs/employee/${empId}`, {
+      const response = await axios.get(`https://salescrm-server.onrender.com/api/recentlogs/employee/${empId}`, {
         withCredentials: true,
       });
 

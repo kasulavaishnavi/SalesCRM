@@ -28,7 +28,7 @@ const Home = () => {
       } else {
         try {
           await axios.post(
-            "http://localhost:4000/api/attendance/checkout",
+            "https://salescrm-server.onrender.com/api/attendance/checkout",
             {},
             { withCredentials: true }
           );
@@ -50,7 +50,7 @@ const Home = () => {
 const fetchTodayAttendance = async () => {
   try {
     const res = await axios.get(
-      `http://localhost:4000/api/attendance/today?empId=${empId}`,
+      `https://salescrm-server.onrender.com/api/attendance/today?empId=${empId}`,
       { withCredentials: true }
     );
     const data = res.data;

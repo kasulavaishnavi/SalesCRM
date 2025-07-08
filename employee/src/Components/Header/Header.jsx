@@ -10,7 +10,7 @@ const Header = () => {
   const empId = sessionStorage.getItem("empId");
 
   const getName = async () => {
-    const res = await axios.get("http://localhost:4000/api/auth/me", {
+    const res = await axios.get("https://salescrm-server.onrender.com/api/auth/me", {
       withCredentials: true,
     });
     console.log(res.data);

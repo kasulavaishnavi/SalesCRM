@@ -22,7 +22,7 @@ const handleChange = (e) => {
 const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    const res = await axios.put("http://localhost:4000/api/auth/profile/update", profileData, { withCredentials: true });
+    const res = await axios.put("https://salescrm-server.onrender.com/api/auth/profile/update", profileData, { withCredentials: true });
     alert(res.data.message);
   } catch (error) {
     alert(error.response?.data?.message || "Update failed");
