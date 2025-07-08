@@ -17,7 +17,9 @@
   app.use(
     cors({
       origin: ["http://localhost:3000", "http://localhost:3001", "https://salescrm-employee.onrender.com", "https://salescrm-salesadmin.onrender.com"],
-      credentials: true,
+          credentials: true,
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     })
   );
 
@@ -38,7 +40,7 @@
       store: sessionStore,
       cookie: {
         httpOnly: true,
-        secure: false, 
+        secure: process.env.NODE_ENV === "production", 
         sameSite: "Lax",
       },
     })
