@@ -86,7 +86,8 @@ const empLogin = asyncHandler(async (req, res) => {
         console.error('Session save error:', err);
         return res.status(500).json({ message: 'Failed to save session' });
       }
-
+  console.log("Session saved successfully:", req.session);
+  
       res.json({
         empId: user._id,
         firstName: user.firstName,
