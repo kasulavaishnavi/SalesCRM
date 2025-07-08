@@ -13,6 +13,8 @@
   dbConnection();
 
   const app = express();
+  app.set("trust proxy", 1);
+
   app.use(express.json());
   app.use(
     cors({
@@ -41,7 +43,8 @@
     cookie: {
       httpOnly: true,
       secure: true,// must be true in production
-      sameSite: "None", // required for cross-origin cookies
+      sameSite: "None", 
+       domain: ".onrender.com", 
     },
   })
 );
