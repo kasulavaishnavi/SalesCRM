@@ -1,0 +1,108 @@
+.modalOverlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalBox {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  width: 400px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.closeBtn {
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+.uploadSection {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.cancelBtn {
+  background: transparent;
+  border: 1px solid #999;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.uploadBtn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.resultBox {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.successBox {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.errorBox {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.verifyingBox {
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  border: 1px dotted black;
+  height: 100%;
+}
+
+.progressCircle {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 15px;
+}
+
+.verifyingText {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.btns{
+  display: flex;
+  /* align-items: end; */
+  justify-content: end;
+  gap: 10px;
+  margin-top: 10px;
+}

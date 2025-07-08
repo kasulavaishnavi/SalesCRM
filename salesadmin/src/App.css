@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.App{
+    display: flex;
+}
+.container{
+    width: 15vw;
+    height: 100vh;
+    background-color:rgb(198, 198, 198);
+    display: flex;
+    flex-direction: column; 
+}
+.app{
+    padding: 20px 20px 10px ;
+     display: flex;
+
+    flex-direction: column;
+}
+.crm{
+    color: blue;
+}
+.break{
+    margin-top: 20px;
+    border-bottom: 1px solid black;
+
+}
+.name{
+    font-size: 14px;
+}

@@ -1,0 +1,92 @@
+.leads-container {
+  width: 85vw;
+  padding: 20px;
+  color: #333333;
+}
+.searchLead{
+  position: absolute;
+  width: 21vw;
+  height: 4vh;
+  border: none;
+  background-color: transparent;
+  outline: none; 
+  margin-top: -1px; 
+  padding-left: 25px;
+}
+
+.search{
+  width: 22vw;
+  height: 6vh;
+display: flex;
+align-items: center;
+  background-color: rgb(222, 221, 221);
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+
+}
+
+
+.leads-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+.add-leads-btn {
+  background-color: #eee;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.leads-table {
+  width: 100%;
+  border-collapse: collapse;
+    border-spacing: 0 120px; 
+}
+
+.leads-table th,
+.leads-table td {
+  text-align: left;
+  padding: 12px 16px;
+
+}
+
+
+.table-container {
+  max-height: 450px; /* adjust as needed */
+  overflow-y: scroll;
+  margin-right: 10px;
+}
+
+
+
+.leads-table th,
+.leads-table td {
+  text-align: left;
+  padding: 12px 16px;
+}
+
+.leads-table thead {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border-bottom: 1px solid gray;
+  color: rgb(61, 61, 61);
+}
+
+
+
+/* .leads-table tr:last-child {
+  border-bottom: none;
+} */
+
+/* .leads-table td:last-child {
+  text-align: center;
+  cursor: pointer;
+} */

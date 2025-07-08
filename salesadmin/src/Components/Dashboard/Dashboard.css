@@ -1,0 +1,221 @@
+.dash {
+  width: 85vw;
+  padding: 20px 20px 0px 20px;
+}
+
+.headingDash {
+  margin-bottom: 0px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+.gridDashboard {
+  width: 80vw;
+  display: grid;
+  grid-template-areas:
+    "cards cards cards cards"
+    "sales sales logs logs"
+    "emp emp emp emp";
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.cards {
+  grid-area: cards;
+  height: 150%;
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0);
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  flex-direction: row;
+  margin-left: -9px;
+}
+
+.card {
+  flex: 1;
+  padding: 15px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  gap: 10px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+}
+
+.icons{
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background-color: rgb(187, 187, 187);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.values{
+  color: black;
+  font-size: larger;
+  font-weight: 500;
+}
+.sales {
+  grid-area: sales;
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  margin-top: 50px;
+  height: 35vh;
+  width: 60vw;
+  border: 1px solid black;
+  margin-right: 10px;
+}
+
+.logs {
+  grid-area: logs;
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  height: 35vh;
+  border: 1px solid black;
+  margin-top: 50px;
+overflow-y: scroll;
+}
+.logs::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+.emp {
+  margin-top: 10px;
+  grid-area: emp;
+  background-color: white;
+  border-radius: 12px;
+  /* padding: 10px; */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.employee-dashboard {
+  padding: 10px;
+  font-family: sans-serif;
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 32vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.employee-dashboard::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+.employee-table {
+  width: 100%;
+}
+
+.employee-table th,
+.employee-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+  font-size: small;
+}
+
+.emp-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  background-color: #f3f3f3;
+  color: #333;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.name-email {
+  display: flex;
+  flex-direction: column;
+}
+
+.emp-name {
+  font-weight: 600;
+}
+
+.emp-email {
+  font-size: 0.8rem;
+  color: gray;
+}
+
+.emp-id-pill {
+  background-color: #e6e9f0;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #333;
+}
+.leads {
+  position: relative;
+  left: 40px;
+}
+.status-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 12px;
+  width: fit-content;
+}
+
+.status-pill .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.status-pill.active {
+  background-color: #e6f9e8;
+  color: #1a7f37;
+}
+
+.status-pill.active .dot {
+  background-color: #1a7f37;
+}
+
+.status-pill.inactive {
+  background-color: #fce8e6;
+  color: #c0392b;
+}
+
+.status-pill.inactive .dot {
+  background-color: #c0392b;
+}
+
+
+.header {
+  margin: 5px;
+}
+
+.list{
+  list-style: disc;
+  padding-left: 20px;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 30px;
+}

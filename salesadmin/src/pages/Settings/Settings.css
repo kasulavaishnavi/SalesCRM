@@ -1,0 +1,94 @@
+.edit-container {
+  padding: 10px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.edit-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  height: 500px;
+}
+
+.edit-card h3 {
+  margin-bottom: 10px;
+  /* border-bottom: 1px solid #ccc; */
+  padding-bottom: 1px;
+}
+
+.edit-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-card label {
+  font-size: 14px;
+  color: #000000;
+  margin-bottom: 2px;
+  font-weight:500;
+
+}
+
+.edit-card input {
+  padding: 9px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.edit-card button {
+  align-self: flex-end;
+  padding: 10px 20px;
+  border: none;
+  background-color: #ddd;
+  color: #333;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.edit-card button:hover {
+  background-color: #bbb;
+}
+
+.saved{
+  margin-top : -28px;
+}
+
+.settingsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 20px;
+  flex-direction: column;
+}
+
+.searchInp {
+  display: flex;
+  align-items: center;
+  background-color: #d0d0d0;
+  padding:  10px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.searchInp i {
+  color: #666;
+  margin-right: 10px;
+}
+.Inp{
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.header h3 {
+  font-size: 16px;
+  /* color: #333; */
+
+}

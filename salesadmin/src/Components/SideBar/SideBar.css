@@ -1,0 +1,25 @@
+.sidebar{
+    display: flex;
+    align-items: start;
+flex-direction: column;
+gap: 20px;
+padding: 20px 10px 10px 10px;
+letter-spacing: 1px;
+font-weight: 500;
+font-size: 14px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 5px 15px;
+  text-decoration: none;
+  color: black;
+  border-radius: 10px; /* for rounded highlight */
+}
+
+.sidebar a.active {
+  background-color: grey; /* or your desired highlight color */
+  color: white;
+  font-weight: bold;
+  width: 100%;
+}
