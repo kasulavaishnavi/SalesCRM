@@ -21,7 +21,7 @@ const Leads = () => {
   useEffect(() => {
  const empLeads = async () => {
   try {
-    const res = await axios.get("https://salescrm-server.onrender.com/api/leads/Empleads", {
+    const res = await axios.get("https://salescrm-server.onrender.com/api/leads/empleads", {
       withCredentials: true,
     });
     console.log("My leads:", res.data);

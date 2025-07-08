@@ -30,5 +30,5 @@ router.route('/:id')
 router.patch('/:id/type', updateLeadType);
 router.patch('/:id/schedule', updateLeadSchedule);
 router.patch('/:id/status', updateLeadStatus);
-router.get("/Empleads",isAuthenticated, empLeads);
+router.get("/empleads",isAuthenticated, empLeads);
 module.exports = router;
