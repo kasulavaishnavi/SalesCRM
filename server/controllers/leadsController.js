@@ -222,11 +222,25 @@ const updateLeadStatus = asyncHandler(async (req, res) => {
   res.status(200).json({ message: "Lead status updated successfully", lead });
 });
 
+
+// Get leads assigned to the current logged-in employee
+const empLeads = asyncHandler(async (req, res) => {
+  if (!req.user) {
+    res.status(401);
+    throw new Error("Not authorized. Please login again.");
+  }
+
+  const leads = await Lead.find({ assignedTo: req.user._id });
+
+  res.status(200).json(leads);
+});
+
 module.exports = {
   getLeads,
   getLeadById,
   createLead,
   updateLeadType,
   updateLeadSchedule,
-  updateLeadStatus
+  updateLeadStatus,
+  empLeads
 };

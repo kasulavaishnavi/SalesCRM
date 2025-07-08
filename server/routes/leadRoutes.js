@@ -6,10 +6,13 @@ const {
   createLead,
   updateLeadType,
   updateLeadSchedule,
-  updateLeadStatus
+  updateLeadStatus,
+  empLeads,
 } = require('../controllers/leadsController');
 const { uploadCsv } = require("../controllers/leadDistribute");
 const upload = require('../middleware/uploadMiddleware');
+  const { isAuthenticated, } = require('../middleware/empMiddleware');
+
 
 // Upload CSV route 
 router.post('/upload-csv', upload.single('file'), (req, res, next) => {
@@ -27,5 +30,5 @@ router.route('/:id')
 router.patch('/:id/type', updateLeadType);
 router.patch('/:id/schedule', updateLeadSchedule);
 router.patch('/:id/status', updateLeadStatus);
-
+router.get("/Empleads",isAuthenticated, empLeads);
 module.exports = router;

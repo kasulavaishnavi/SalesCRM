@@ -17,15 +17,21 @@ const Leads = () => {
   const statusPopupRef = useRef();
   const filterDropdownRef = useRef();
 
+
   useEffect(() => {
-    const fetchLeads = async () => {
-      const res = await axios.get("https://salescrm-server.onrender.com/api/leads", {
-        withCredentials: true,
-      });
-      setLeads(res.data);
-    };
-    fetchLeads();
-  }, []);
+ const empLeads = async () => {
+  try {
+    const res = await axios.get("https://salescrm-server.onrender.com/api/leads/Empleads", {
+      withCredentials: true,
+    });
+    console.log("My leads:", res.data);
+  } catch (error) {
+    console.error("Failed to fetch my leads:", error);
+  }
+};
+
+  empLeads();
+}, []);
 
   // ✅ Close popups on outside click
   useEffect(() => {
