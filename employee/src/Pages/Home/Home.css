@@ -1,0 +1,93 @@
+.home-container {
+  padding: 0px 20px; 
+  box-sizing: border-box; 
+letter-spacing: 1px;
+height: 72vh;
+}
+
+
+.timings-section h4 {
+  color: black;
+  font-weight: bold;
+  font-size: large;
+}
+
+.checkin-checkout-card {
+  background-color: #2051E5; 
+  color: white; 
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: -10px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  position: relative;
+  height: 30px; 
+  overflow: hidden;
+padding: 15px;
+}
+
+.checkin-info,
+.checkout-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0px;
+}
+
+.checkin-info {
+  margin-right: 20px;
+}
+
+.checkin-checkout-card .label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.checkin-checkout-card .time {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Custom Toggle Switch Styling */
+.toggle-color-container {
+  width: 10px;
+  height: 30px;
+  border-radius: 14px;
+  position: relative;
+  transition: background-color 0.3s ease;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.toggle-color-container.active {
+  background-color: #64E800; 
+  border: 2px solid white;
+}
+.breaks-card h5{
+  font-size: 16px;
+}
+.breakTab{
+  height: 190px;
+  overflow-y:scroll ;
+}
+
+.breaks-table {
+  overflow-y: scroll;
+  height: 80px;
+  background-color: #000;
+  width: 100%;
+  margin-top: 10px;
+  color: #000;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: #EEF2FF;
+}
+
+.breaks-table th,
+.breaks-table td {
+  padding: 5px;
+  text-align: start;
+}
+

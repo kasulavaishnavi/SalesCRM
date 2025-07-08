@@ -1,0 +1,133 @@
+.schedule-container {
+  padding: 10px;
+  background: #f8f9fd;
+  height: 72vh;
+  overflow-y: auto;
+}
+
+
+
+.search {
+display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #e0e0e0;
+  padding: 10px 12px;
+  border-radius: 20px;
+  margin: 20px 10px 10px 10px;
+}
+.search input{
+  outline: none;
+  border: none;
+  background-color: transparent;
+  margin-right: 79px;
+}
+
+.search i {
+  margin-right: 1px;
+  color: #555;
+
+}
+
+
+.schedules {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  padding: 15px;
+}
+
+.scheduled-lead-card {
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 300px;
+}
+
+.scheduled-lead-card {
+  background-color: rgb(227, 225, 225); 
+  color: black;
+
+}
+.scheduled-lead-card:hover{
+  background-color: blue;
+  color: white;
+}
+
+
+.scheduled-lead-card h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.scheduled-lead-card p {
+  margin: 0;
+  font-size: 14px;
+}
+.Date{
+  text-align: center;
+}
+.scheduled-date {
+  text-align: right;
+  font-weight: 500;
+}
+
+.leadName{
+ display: flex; 
+ align-items: center;
+ gap: 8px 
+}
+
+.leadPhone{
+display: flex; 
+align-items: center;
+gap: 8px
+}
+
+.leadSource{
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-icon {
+  font-size: 18px;
+  color: #555;
+  cursor: pointer;
+}
+
+.filter-popup {
+  position: absolute;
+  top: 190px;
+  right: 30px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 12px;
+  width: 150px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+
+
+.filter-select-popup {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.filter-save-btn {
+  background: black;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+}

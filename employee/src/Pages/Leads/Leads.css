@@ -1,0 +1,180 @@
+.leads-container {
+  padding: 20px;
+  background: #f5f6fa;
+  height: 72vh;
+  overflow-y: scroll;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background: #e0e0e0;
+  padding: 8px 12px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.search i {
+  margin-right: 8px;
+  color: #555;
+}
+
+.searchLead {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+.filter-dropdown{
+  width: 100px;
+  height: 80px;
+  background-color: white;
+}
+.filters{
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+margin-bottom: 2px;
+}
+.lead-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.lead-card h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.lead-card p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #777;
+}
+
+.lead-card .status-ring {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 7px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+
+.status-ring.hot {
+  border-color: red;
+}
+
+.status-ring.warm {
+  border-color: yellowgreen;
+}
+
+.status-ring.cold {
+  border-color: blue;
+}
+.lead-card .date {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.lead-card .date i {
+  margin-right: 5px;
+  color: black;
+}
+
+.lead-card .actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+display: flex;
+align-items: center;
+justify-content: end;
+}
+
+.lead-card .actions button {
+  background: none;
+  border: none;
+  color: blue;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.popup-overlay{
+  position: absolute;
+  top: 26%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.popup-overlay1{
+  position: absolute;
+  top: 140%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.popup-overlay2 {
+  position: absolute;
+  top: 140%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+ .popup-overlay3 {
+  position: absolute;
+  top: 120%;
+  left: 76%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+.popup {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  width: 110px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.popup1.hot {
+  background-color: red;
+}
+.popup2.warm {
+  background-color: yellowgreen;
+}
+.popup3.cold {
+  background-color: blue;
+}
+.popup button, .popup select, .popup input {
+  display: block;
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+
+.popup button {
+  color: white;
+  border: none;
+  background-color: gray;
+}
+
+

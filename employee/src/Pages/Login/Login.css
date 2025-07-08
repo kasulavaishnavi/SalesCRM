@@ -1,0 +1,41 @@
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+margin: 100px;
+}
+
+.loginContainer{
+
+border: 1px solid black;
+box-shadow:  0px 0px 10px 2px rgb(189, 190, 190);;
+height: 200px;
+border-radius: 20px;
+padding: 10px 40px 80px 40px;
+}
+.loginContainer h5{
+font-size: large;
+}
+.loginContainer form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.loginContainer form input{
+    width: 180px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    outline: none;
+}
+
+.loginContainer form button{
+    padding: 10px 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    outline: none;
+}

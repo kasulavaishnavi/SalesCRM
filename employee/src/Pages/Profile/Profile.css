@@ -1,0 +1,39 @@
+.profile-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  height: 70vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+form input:focus {
+  border-color: #007bff;
+}
+
+form button {
+  padding: 10px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}

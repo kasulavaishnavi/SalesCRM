@@ -1,0 +1,52 @@
+.Header{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 2px;
+}
+
+.Top{
+    width: 100vw;
+    height: 130px;   
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(68, 59, 246);
+    border-radius: 0px 0px 30px 30px;
+    color: white;
+    letter-spacing: 1px;
+
+}
+.title{
+    display: flex;
+    flex-direction: row;
+    font-size: large;
+    font-weight: 500;
+    margin: 10px 0px 0px 20px;
+}
+.crm{
+    color: yellow;
+}
+.greetings{
+    margin: 0px 20px;
+    display: flex;
+flex-direction: column;
+align-items: start;
+}
+.empName{
+    text-align: start;
+    position: relative;
+    bottom: 30px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  justify-content: start;
+  position: absolute;
+  top: 60px;
+  left: 20px;
+}
+.nav i{
+    color: white;
+}
