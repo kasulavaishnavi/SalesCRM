@@ -16,7 +16,7 @@
   app.use(express.json());
   app.use(
     cors({
-      origin: ["http://localhost:3000", "http://localhost:3001", "https://salescrm-employee.onrender.com", "https://salescrm-salesadmin.onrender.com"],
+      origin: ["https://salescrm-employee.onrender.com", "https://salescrm-salesadmin.onrender.com"],
           credentials: true,
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
@@ -32,19 +32,19 @@
   });
 
   // Session middleware
-  app.use(
-    session({
-      secret: process.env.SESSION_SECRET || "supersecretkey",
-      resave: false,
-      saveUninitialized: false,
-      store: sessionStore,
-      cookie: {
-        httpOnly: true,
-      secure: process.env.NODE_ENV === "production", 
-  sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax",
-      },
-    })
-  );
+  aapp.use(
+  session({
+    secret: process.env.SESSION_SECRET || "supersecretkey",
+    resave: false,
+    saveUninitialized: false,
+    store: sessionStore,
+    cookie: {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production", // must be true in production
+      sameSite: "None", // required for cross-origin cookies
+    },
+  })
+);
 
     app.get("/", (req, res) => {
     res.send("Server is running");
