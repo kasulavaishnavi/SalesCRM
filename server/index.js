@@ -32,7 +32,7 @@
   });
 
   // Session middleware
-  aapp.use(
+  app.use(
   session({
     secret: process.env.SESSION_SECRET || "supersecretkey",
     resave: false,
