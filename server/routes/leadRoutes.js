@@ -29,7 +29,7 @@ router.route('/')
 router.route('/:id')
   .get(getLeadById);
 
-router.patch('/:id/type', updateLeadType);
-router.patch('/:id/schedule', updateLeadSchedule);
-router.patch('/:id/status', updateLeadStatus);
+router.patch('/:id/type',isAuthenticated, updateLeadType);
+router.patch('/:id/schedule',isAuthenticated, updateLeadSchedule);
+router.patch('/:id/status',isAuthenticated, updateLeadStatus);
 module.exports = router;
