@@ -6,6 +6,23 @@ const EmployeeDisplay = () => {
   const [employeeData, setEmployeeData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+const [leadsData, setLeadsData] = useState([]);
+
+const fetchLeads = async () => {
+  try {
+    const response = await axios.get(`http://localhost:4000/api/leads`, {
+      withCredentials: true,
+    });
+    const data = Array.isArray(response.data) ? response.data : [];
+    setLeadsData(data);
+  } catch (err) {
+    console.error("Error fetching leads data:", err);
+  }
+};
+
+useEffect(() => {
+  fetchLeads();
+}, []);
 
   useEffect(() => {
     const EmployeeDashboardData = async () => {
@@ -42,10 +59,10 @@ const EmployeeDisplay = () => {
         </thead>
         <tbody>
           {employeeData.map((emp) => {
-            const closedLeads =
-              emp.assignedLeads?.filter(
-                (lead) => lead.status === "Closed" || lead.status === "Won"
-              ).length || 0;
+           const closedLeads = leadsData.filter(
+  (lead) => lead.status === "Closed" && lead.closedLead === emp._id
+).length;
+
 
             const initials = `${emp.firstName[0] || ""}${emp.lastName[0] || ""}`.toUpperCase();
             const status = emp.isActive ? "Active" : "Inactive";

@@ -14,7 +14,7 @@ const Employees = () => {
   const [isEdit, setIsEdit] = useState(false);
   const [selectedEmp, setSelectedEmp] = useState(null);
 const [openDropdownId, setOpenDropdownId] = useState(null);
-
+const [leadsData, setLeadsData] = useState([]);
 
 
 
@@ -93,7 +93,7 @@ const [openDropdownId, setOpenDropdownId] = useState(null);
           withCredentials: true,
         }
       );
-      fetchData(); // Refresh table
+      fetchData(); 
       setShowModal(false);
     } catch (err) {
       console.error("Error adding employee:", err);
@@ -109,7 +109,7 @@ const [openDropdownId, setOpenDropdownId] = useState(null);
           withCredentials: true,
         }
       );
-      fetchData(); // Refresh table
+      fetchData(); 
     } catch (err) {
       console.error("Error updating employee:", err);
     }
@@ -134,6 +134,23 @@ const [openDropdownId, setOpenDropdownId] = useState(null);
     await axios.delete(`https://salescrm-server.onrender.com/api/auth/delete/${id}`);
     fetchData();
   };
+
+  
+const fetchLeads = async () => {
+  try {
+    const response = await axios.get(`https://salescrm-server.onrender.com/api/leads`, {
+      withCredentials: true,
+    });
+    const data = Array.isArray(response.data) ? response.data : [];
+    setLeadsData(data);
+  } catch (err) {
+    console.error("Error fetching leads data:", err);
+  }
+};
+
+useEffect(() => {
+  fetchLeads();
+}, []);
 
   return (
     <div className="empPage">
@@ -166,10 +183,10 @@ const [openDropdownId, setOpenDropdownId] = useState(null);
         </thead>
         <tbody>
           {paginatedData.map((emp) => {
-            const closedLeads =
-              emp.assignedLeads?.filter(
-                (lead) => lead.status === "Closed" || lead.status === "Ongoing"
-              ).length || 0;
+            const closedLeads = leadsData.filter(
+  (lead) => lead.status === "Closed" && lead.closedLead === emp._id
+).length;
+
 
             const initials =
               `${emp.firstName[0] || ""}${emp.lastName[0] || ""}`.toUpperCase();
