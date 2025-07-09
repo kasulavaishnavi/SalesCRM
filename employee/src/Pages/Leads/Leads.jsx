@@ -25,11 +25,11 @@ const Leads = () => {
       withCredentials: true,
     });
     console.log("My leads:", res.data);
+    setLeads(res.data)
   } catch (error) {
     console.error("Failed to fetch my leads:", error);
   }
 };
-
   empLeads();
 }, []);
 
