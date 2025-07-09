@@ -172,12 +172,21 @@ background-color: transparent;
 
 .pagination{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 10px;
+  gap: 0px;
+}
+
+.currPage{
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .pagination button{
+
   width: 100px;
   height: 26px;
   color: black;

@@ -252,6 +252,7 @@ const [openDropdownId, setOpenDropdownId] = useState(null);
 
           Previous
         </button>
+        <div className="currPage">
         {[...Array(totalPages)].map((_, idx) => (
           <button
             key={idx + 1}
@@ -262,6 +263,7 @@ const [openDropdownId, setOpenDropdownId] = useState(null);
             {idx + 1}
           </button>
         ))}
+        </div>
         <button
           disabled={currentPage === totalPages}
           onClick={() => setCurrentPage((p) => p + 1)}
