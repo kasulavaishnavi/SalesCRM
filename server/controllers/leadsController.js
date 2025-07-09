@@ -214,7 +214,10 @@ const updateLeadStatus = asyncHandler(async (req, res) => {
     res.status(404);
     throw new Error("Lead not found");
   }
+ if (status === "Closed") {
 
+    lead.closedLead = req.user._id; 
+  }
 
   lead.status = status;
   await lead.save();

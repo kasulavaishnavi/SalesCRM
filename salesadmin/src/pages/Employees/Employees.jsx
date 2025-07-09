@@ -82,7 +82,7 @@ const [openDropdownId, setOpenDropdownId] = useState(null);
       email: newEmp.email,
       location: newEmp.location,
       language: newEmp.language,
-      password: newEmp.lastName, // default password = last name
+      password: newEmp.lastName, 
     };
     console.log("Payload being sent:", payload);
     try {
