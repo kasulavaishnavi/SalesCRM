@@ -60,7 +60,7 @@ const Leads = () => {
 
   const updateType = async (id, type) => {
     await axios.patch(
-      `http://localhost:4000/api/leads/${id}/type`,
+      `https://salescrm-server.onrender.com/api/leads/${id}/type`,
       { type },
       { withCredentials: true }
     );
@@ -74,7 +74,7 @@ const Leads = () => {
 
   const updateSchedule = async (id) => {
     await axios.patch(
-      `http://localhost:4000/api/leads/${id}/schedule`,
+      `https://salescrm-server.onrender.com/api/leads/${id}/schedule`,
       scheduleData,
       { withCredentials: true }
     );
@@ -83,7 +83,7 @@ const Leads = () => {
 
   const updateStatus = async (id, status) => {
     const res = await axios.patch(
-      `http://localhost:4000/api/leads/${id}/status`,
+      `https://salescrm-server.onrender.com/api/leads/${id}/status`,
       { status },
       { withCredentials: true }
     );
