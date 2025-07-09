@@ -231,9 +231,9 @@ const empLeads = asyncHandler(async (req, res) => {
   }
 
   const leads = await Lead.find({ assignedTo: req.user._id });
-
   res.status(200).json(leads);
 });
+
 
 module.exports = {
   getLeads,

@@ -20,6 +20,8 @@ router.post('/upload-csv', upload.single('file'), (req, res, next) => {
   next();
 }, uploadCsv);
 
+router.get("/empleads",isAuthenticated, empLeads);
+
 router.route('/')
   .get(getLeads)
   .post(createLead);
@@ -30,5 +32,4 @@ router.route('/:id')
 router.patch('/:id/type', updateLeadType);
 router.patch('/:id/schedule', updateLeadSchedule);
 router.patch('/:id/status', updateLeadStatus);
-router.get("/empleads",isAuthenticated, empLeads);
 module.exports = router;
