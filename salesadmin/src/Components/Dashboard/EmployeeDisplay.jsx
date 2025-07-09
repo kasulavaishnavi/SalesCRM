@@ -10,7 +10,7 @@ const [leadsData, setLeadsData] = useState([]);
 
 const fetchLeads = async () => {
   try {
-    const response = await axios.get(`http://localhost:4000/api/leads`, {
+    const response = await axios.get(`https://salescrm-server.onrender.com/api/leads`, {
       withCredentials: true,
     });
     const data = Array.isArray(response.data) ? response.data : [];
