@@ -95,7 +95,6 @@ const EmployeeModal = ({ isOpen, onClose, onSave, initialData = {}, isEdit = fal
             <option value="Bengali">Bengali</option>
             <option value="Tamil">Tamil</option>
 
-            {/* Add more languages as needed */}
           </select>
           <small>Lead will be assigned based on language</small>
 

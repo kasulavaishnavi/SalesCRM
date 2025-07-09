@@ -26,7 +26,7 @@ const [openDropdownId, setOpenDropdownId] = useState(null);
     setOpen(!open);
   };
 
-  // Close dropdown if clicked outside
+  // Close dropdown 
  useEffect(() => {
   const handleClickOutside = (event) => {
     if (!event.target.closest(".menu-button") && !event.target.closest(".dropdown-menu")) {
