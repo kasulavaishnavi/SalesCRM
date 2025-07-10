@@ -16,14 +16,27 @@
   app.set("trust proxy", 1);
 
   app.use(express.json());
-  app.use(
-    cors({
-      origin: ["https://salescrm-employee.onrender.com", "https://salescrm-salesadmin.onrender.com", "http://localhost:3000"],
-          credentials: true,
+
+const allowedOrigins = [
+  "https://salescrm-employee.onrender.com",
+  "https://salescrm-salesadmin.onrender.com",
+  "http://localhost:3000"
+];
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
-    })
-  );
+  })
+);
 
   //Session store
   const sessionStore = MongoStore.create({

@@ -36,13 +36,7 @@ const EmpByAdmin = asyncHandler(async (req, res) => {
 
 
   if (user) {
-    await logActivity(
-      user._id,
-      'employee_created',
-      `Employee ${user.firstName} ${user.lastName} was created by admin`,
-      null,
-      user._id
-    );
+  
 
     res.status(201).json({
       _id: user._id,
